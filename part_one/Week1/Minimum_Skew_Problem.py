@@ -21,18 +21,37 @@ def minimum_skew(genome):
             print("the new skew will be replaced automatically")
             min_skew = skew
             min_skew_index = i + 1
-
-
-
     return min_skew, min_skew_index
 
 
 
+def minimum_skew_with_pandas(genome):
+    """ this function calculates the skew using pandas!"""
+    import numpy as np
+    skew = np.zeros(len(genome)+1)
+    for i in range (1, len(genome)+1):
+        if genome[i-1] == "G":
+            skew[i] = skew[i-1] + 1
+        elif genome[i-1] == "C":
+            skew[i] = skew[i-1] -1
+        else:
+            skew[i] = skew[i-1]
+    min_skew = np.where(skew ==np.min(skew))
+    return min_skew[0]
 
 
+
+### Data importing
 # genome = "TAAAGACTGCCGAGAGGCCAACACGAGTGCTAGAACGAGGGGCGTAAACGCGGGTCCGAT"
-
-
 file = open("dataset_30277_10.txt", "r")
 genome = file.read()
+
+
+### Calling functions
 print(minimum_skew(genome))
+# print(minimum_skew_with_pandas(genome))
+
+
+
+
+#todo it would be beautiful if i try to calculate the performance of these two methods and put the time comparison of them on linkdin.
