@@ -18,13 +18,29 @@ def find_neighbors(pattern, d):
 
     return neighborhood
 
+def generate_reverse_complement(seq):
+    transcription_dict = {"C": "G", "G": "C", "T": "A", "A": "T"}
+    reverse_complement = []
+    for i in range(0, len(seq)):
+        reverse_complement.append(transcription_dict[seq[i]])
+
+    final_seq = "".join(map(str, reversed(reverse_complement)))
+    print(final_seq)
+    return final_seq
+
+
+
 
 def frequent_word_with_mismatch(genome, k, d):
     frequency_map = {}
     for i in range(len(genome) -k +1):
         kmer = genome[i:i+k]
+        rc_kmer = generate_reverse_complement(kmer)
         neigborhood = find_neighbors(kmer, d)
-        for neighbor in neigborhood:
+        rc_neigborhood = find_neighbors(rc_kmer,d)
+        every_neighbor = neigborhood.union(rc_neigborhood)
+        # print(every_neighbor)
+        for neighbor in every_neighbor:
             if neighbor in frequency_map:
                 frequency_map[neighbor] += 1
             else:
@@ -44,8 +60,11 @@ def frequent_word_with_mismatch(genome, k, d):
 # print(*find_neighbors(pattern, d), sep=" ")
 
 
-file = open("dataset_30278_9.txt", "r")
-genome = file.read()
-k = 6
+# file = open("dataset_30278_10.txt", "r")
+# genome = file.read().strip()
+
+genome = "ATGTCCTATATAAATAAAATGAATATAACAAATATAAATATATATCCTCCACAAATATCCACAACAATGTAAATAAATCCTCCATGAAAATAAAACAACATAAAATGATGTATAACAACAATGAAACAACAAATAAAATGTCCTCCTATCCAATATAACATAATGTCCTCCACAACATCCAAAATAAAATGACATATAACATCCACA"
+k = 7
 d = 3
+
 print(frequent_word_with_mismatch(genome, k, d))
