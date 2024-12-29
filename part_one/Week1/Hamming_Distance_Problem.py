@@ -21,4 +21,5 @@ genome1 = splited_genome[0]
 genome2 = splited_genome[1]
 
 
+
 print(calculate_hamming_distance(genome1, genome2))
