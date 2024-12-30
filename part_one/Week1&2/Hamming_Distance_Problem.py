@@ -11,14 +11,14 @@ def calculate_hamming_distance(genome1, genome2):
 
 
 ### Setting the function inputs:
-# genome1= "GGGCCGTTGGT"
-# genome2 = "GGACCGTTGAC"
+genome1= "CTTGAAGTGGACCTCTAGTTCCTCTACAAAGAACAGGTTGACCTGTCGCGAAG"
+genome2 = "ATGCCTTACCTAGATGCAATGACGGACGTATTCCTTTTGCCTCAACGGCTCCT"
 
-file = open("dataset_30278_3.txt", "r")
-genomes= file.read()
-splited_genome = genomes.splitlines()
-genome1 = splited_genome[0]
-genome2 = splited_genome[1]
+# file = open("dataset_30278_3.txt", "r")
+# genomes= file.read()
+# splited_genome = genomes.splitlines()
+# genome1 = splited_genome[0]
+# genome2 = splited_genome[1]
 
 
 

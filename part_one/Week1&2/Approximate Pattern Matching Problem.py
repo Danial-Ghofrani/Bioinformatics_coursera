@@ -16,9 +16,9 @@ def Approxime_Pattern_count(seq1, seq2, d):
     print(count)
     return index_list,
 
-# seq1="ATTCTGGA"
-# seq2="CGCCCGAATCCAGAACGCATTCCCATATTTCGGGACCACTGGCCTCCACGGTACGGACGTCAATCAAAT"
-# d=3
+# seq1="CCC"
+# seq2="CATGCCATTCGCATTGTCCCAGTGA"
+# d=2
 
 file = open("dataset_30278_6.txt", "r")
 genome = file.read().strip()
