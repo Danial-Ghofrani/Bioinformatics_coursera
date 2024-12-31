@@ -25,10 +25,7 @@ Welcome to my repository for the **Bioinformatics Specialization** course on Cou
    cd bioinformatics-specialization
    ```
 2. Explore the folders to find exercises, notes, or scripts that interest you. 🕵️‍♂️
-3. Run Python scripts by navigating to their directories and using:
-   ```bash
-   python script_name.py
-   ```
+3. Run Python scripts by navigating to their directories
 4. Tweak and experiment with the scripts to truly make the learning experience your own! 💻✨
 
 ## ✨ Course Highlights
