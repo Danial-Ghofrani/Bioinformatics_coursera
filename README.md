@@ -53,19 +53,21 @@ pip install numpy pandas matplotlib biopython
 ```
 
 ## 📊 Progress Tracker
-| Module                        | Status         |
-|-------------------------------|----------------|
-| 🧬 Introduction to Bioinformatics | ✅ Completed    |
-| 🧩 Genome Assembly Algorithms     | 🔄 In Progress |
-| 🌳 Phylogenetics and Tree-Building| 🕒 Not Started |
-| 🤖 Hidden Markov Models           | 🕒 Not Started |
+| Course                                              | Status         |
+|-----------------------------------------------------|----------------|
+| 🧬 Finding Hidden Messages in DNA (Bioinformatics I)| 🔄 In Progress |
+| 🧩 Genome Sequencing (Bioinformatics II)            | 🕒 Not Started |
+| 🔬 Comparing Genes, Proteins, and Genomes (Bioinformatics III) | 🕒 Not Started |
+| 🌿 Molecular Evolution (Bioinformatics IV)          | 🕒 Not Started |
+| 📊 Genomic Data Science and Clustering (Bioinformatics V) | 🕒 Not Started |
+| 🧬 Finding Mutations in DNA and Proteins (Bioinformatics VI) | 🕒 Not Started |
+| 🧠 Bioinformatics Capstone: Big Data in Biology      | 🕒 Not Started |
 
 ## 🤝 Contributing
 This repository is my personal learning space, but collaboration makes everything better! 🌟 Feel free to share your ideas or improvements by opening an issue or submitting a pull request. Let's grow together! 💪
 
-## 📜 License
-This repository is licensed under the MIT License. Check out the [LICENSE](LICENSE) file for more details.
 
 ---
 
 🌟 **Happy Learning and Coding!** 🧬💻✨
+
