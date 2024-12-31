@@ -21,7 +21,7 @@ Welcome to my repository for the **Bioinformatics Specialization** course on Cou
 ## 🛠️ How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/bioinformatics-specialization.git
+   git clone https://github.com/Danial-Ghofrani/bioinformatics_coursera.git
    cd bioinformatics-specialization
    ```
 2. Explore the folders to find exercises, notes, or scripts that interest you. 🕵️‍♂️
