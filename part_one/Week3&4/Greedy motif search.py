@@ -16,15 +16,15 @@ def most_prob_kmer(seq, k, seq_matrix):
     return most_probable_kmer
 
 
-def create_profile_matrix(motifs):
+def create_profile_matrix(motifs, pseudocount=1):
     k = len(motifs[0])
     t = len(motifs)
-    profile = {nucleotide: [0] * k for nucleotide in "ACTG"}
+    profile = {nucleotide: [pseudocount] * k for nucleotide in "ACTG"}
 
     for i in range(k):
         column = [motif[i] for motif in motifs]
         for nucleotide in "ACGT":
-            profile[nucleotide][i] = column.count(nucleotide) / t
+            profile[nucleotide][i] = (column.count(nucleotide) + pseudocount) / (t + 4 * pseudocount)
 
     return profile
 
@@ -69,7 +69,7 @@ def read_input_file(filename):
 
 
 # Read the input file
-filename = "dataset_30305_5.txt"  # Your input file
+filename = "dataset_30306_9.txt"  # Your input file
 dna_sequences, k, t = read_input_file(filename)
 
 # Call the greedy motif search function
