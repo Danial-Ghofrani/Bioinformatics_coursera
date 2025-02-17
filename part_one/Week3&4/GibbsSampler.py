@@ -118,10 +118,22 @@ def run_gibbs_sampler(dna, k, t, n, iterations=20):
 
     return best_motifs
 
+def consensus_motif(motifs):
+    """
+    Calculate the consensus motif from a set of motifs.
+    """
+    k = len(motifs[0])
+    consensus = ""
+
+    for i in range(k):
+        column = [motif[i] for motif in motifs]
+        most_common = max("ACGT", key=lambda nucleotide: column.count(nucleotide))
+        consensus += most_common
+
+    return consensus
 
 
-
-with open("../Final_Project/MTgenome.txt", "r") as file:  # Replace "filename.txt" with the actual file name
+with open("../Final_Project/250bp region/MTgenome.txt", "r") as file:  # Replace "filename.txt" with the actual file name
     content = file.read()
 
 splited_content = content.splitlines()
@@ -132,4 +144,6 @@ dna = splited_content[1:]
 
 best_motifs = run_gibbs_sampler(dna, k, t, n)
 print(' '.join(best_motifs))
+consensus = consensus_motif(best_motifs)
+print("Consensus Motif:", consensus)
 

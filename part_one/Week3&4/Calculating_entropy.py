@@ -11,7 +11,7 @@ def Motifs_percent_count(motifs):
         # print(count)
         for key in percent_count.keys():
             percent_count[key].append(count[key] / len(motifs))
-
+    print(percent_count)
     return percent_count
 
 
@@ -30,5 +30,6 @@ total_entropy = 0.0
 for l in range(len(motifs[0])):
     p = [percent_count["A"][l], percent_count["C"][l], percent_count["G"][l], percent_count["T"][l]]
     total_entropy += entropy(p)
+
 
 print(total_entropy)
