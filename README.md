@@ -52,8 +52,8 @@ pip install numpy pandas matplotlib biopython
 ## 📊 Progress Tracker
 | Course                                              | Status         |
 |-----------------------------------------------------|----------------|
-| 🧬 Finding Hidden Messages in DNA (Bioinformatics I)| 🔄 In Progress |
-| 🧩 Genome Sequencing (Bioinformatics II)            | 🕒 Not Started |
+| 🧬 Finding Hidden Messages in DNA (Bioinformatics I)| 💡 Done! |
+| 🧩 Genome Sequencing (Bioinformatics II)            | 🔄 In Progress |
 | 🔬 Comparing Genes, Proteins, and Genomes (Bioinformatics III) | 🕒 Not Started |
 | 🌿 Molecular Evolution (Bioinformatics IV)          | 🕒 Not Started |
 | 📊 Genomic Data Science and Clustering (Bioinformatics V) | 🕒 Not Started |
