@@ -40,7 +40,7 @@ def de_bruijn_graph_for_kmers(kmers):
 
     return graph
 
-file = open("dataset_30184_8.txt", "r")
+file = open("dataset_30187_7.txt", "r")
 kmers = file.read().split()
 graph = de_bruijn_graph_for_kmers(kmers)
 print_graph(graph)
